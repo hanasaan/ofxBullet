@@ -18,7 +18,18 @@ ofxBulletTriMeshShape::ofxBulletTriMeshShape() : ofxBulletRigidBody() {
 
 //--------------------------------------------------------------
 ofxBulletTriMeshShape::~ofxBulletTriMeshShape() {
-    
+    if ( bullet_vertices != NULL ) {
+        delete bullet_vertices;
+        bullet_vertices = NULL;
+    }
+    if ( bullet_indices != NULL ) {
+        delete bullet_indices;
+        bullet_indices = NULL;
+    }
+    if ( bullet_indexVertexArrays != NULL ) {
+        delete bullet_indexVertexArrays;
+        bullet_indexVertexArrays = NULL;
+    }
 }
 
 //--------------------------------------------------------------

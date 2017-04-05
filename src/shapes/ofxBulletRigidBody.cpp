@@ -19,7 +19,8 @@ ofxBulletRigidBody::ofxBulletRigidBody() : ofxBulletBaseShape() {
 //--------------------------------------------------------------
 ofxBulletRigidBody::~ofxBulletRigidBody() {
 	// Call remove() explicitly so that the version in this subclass gets called.
-	remove();
+    remove();
+    _world = NULL;
 }
 
 // you can call this function directly if you wish to use the same collision object for multiple rigid bodies,
